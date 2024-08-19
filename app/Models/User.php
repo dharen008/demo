@@ -44,4 +44,19 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+	public function users()
+	{
+		return $this->hasMany( User::class, 'id' );
+	}
+
+	public function manages()
+	{
+		return $this->belongsToMany( User::class, 'user_manage', 'leader_id', 'user_id' );
+	}
+
+	public function manageBy()
+	{
+		return $this->belongsToMany( User::class, 'user_manage', 'user_id', 'leader_id' );
+	}
 }
