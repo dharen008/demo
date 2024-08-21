@@ -1,22 +1,21 @@
 <?php
 
-namespace Rmsramos\Activitylog\Actions;
+namespace Rmsramos\Activitylog\Actions\Concerns;
 
 use Closure;
 use Filament\Actions\StaticAction;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Infolists\Infolist;
-use Filament\Tables\Actions\Action;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
 use Rmsramos\Activitylog\Infolists\Components\TimeLineIconEntry;
-use Rmsramos\Activitylog\Infolists\Components\TimeLinePropertieEntry;
+use Rmsramos\Activitylog\Infolists\Components\TimeLinePropertiesEntry;
 use Rmsramos\Activitylog\Infolists\Components\TimeLineRepeatableEntry;
 use Rmsramos\Activitylog\Infolists\Components\TimeLineTitleEntry;
 use Spatie\Activitylog\Models\Activity;
 
-class ActivityLogTimelineAction extends Action
+trait ActionContent
 {
     private ?array $withRelations = null;
 
@@ -63,7 +62,7 @@ class ActivityLogTimelineAction extends Action
                         foreach ($relations as $relation) {
                             $model = get_class($record->{$relation}()->getRelated());
                             $query->orWhere(function (Builder $q) use ($record, $model, $relation) {
-                                $q->where('subject_type', (new $model())->getMorphClass())
+                                $q->where('subject_type', (new $model)->getMorphClass())
                                     ->whereIn('subject_id', $record->{$relation}()->pluck('id'));
                             });
                         }
@@ -106,7 +105,7 @@ class ActivityLogTimelineAction extends Action
                     TimeLineTitleEntry::make('activityData')
                         ->configureTitleUsing($this->modifyTitleUsing)
                         ->shouldConfigureTitleUsing($this->shouldModifyTitleUsing),
-                    TimeLinePropertieEntry::make('activityData'),
+                    TimeLinePropertiesEntry::make('activityData'),
                     TextEntry::make('log_name')
                         ->hiddenLabel()
                         ->badge(),
@@ -257,4 +256,5 @@ class ActivityLogTimelineAction extends Action
             'update'      => $activity->updated_at,
         ];
     }
+
 }

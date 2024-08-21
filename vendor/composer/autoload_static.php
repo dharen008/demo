@@ -42,6 +42,7 @@ class ComposerStaticInit7e8c3c14ff33b199b4a0838993eb8423
         'b69d5f1f95cd1ed438c038b6cbcc45b5' => __DIR__ . '/..' . '/filament/notifications/src/Testing/Autoload.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
+        '72b1e3f4a2af9b30b3f137b3ec2057fc' => __DIR__ . '/..' . '/spatie/laravel-activitylog/src/helpers.php',
         '89e9938b64b06cc502d7ceca69a380fe' => __DIR__ . '/..' . '/filament/filament/src/global_helpers.php',
         'ebb446bb6d02e998480945fbbb73dc64' => __DIR__ . '/..' . '/filament/filament/src/helpers.php',
         'c72349b1fe8d0deeedd3a52e8aa814d8' => __DIR__ . '/..' . '/mockery/mockery/library/helpers.php',
@@ -101,11 +102,14 @@ class ComposerStaticInit7e8c3c14ff33b199b4a0838993eb8423
             'Spatie\\LaravelPackageTools\\' => 27,
             'Spatie\\Invade\\' => 14,
             'Spatie\\Color\\' => 13,
+            'Spatie\\Activitylog\\' => 19,
         ),
         'R' => 
         array (
             'RyanChandler\\BladeCaptureDirective\\Database\\Factories\\' => 54,
             'RyanChandler\\BladeCaptureDirective\\' => 35,
+            'Rmsramos\\Activitylog\\Database\\Factories\\' => 40,
+            'Rmsramos\\Activitylog\\' => 21,
             'Ramsey\\Uuid\\' => 12,
             'Ramsey\\Collection\\' => 18,
         ),
@@ -376,6 +380,10 @@ class ComposerStaticInit7e8c3c14ff33b199b4a0838993eb8423
         array (
             0 => __DIR__ . '/..' . '/spatie/color/src',
         ),
+        'Spatie\\Activitylog\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/laravel-activitylog/src',
+        ),
         'RyanChandler\\BladeCaptureDirective\\Database\\Factories\\' => 
         array (
             0 => __DIR__ . '/..' . '/ryangjchandler/blade-capture-directive/database/factories',
@@ -383,6 +391,14 @@ class ComposerStaticInit7e8c3c14ff33b199b4a0838993eb8423
         'RyanChandler\\BladeCaptureDirective\\' => 
         array (
             0 => __DIR__ . '/..' . '/ryangjchandler/blade-capture-directive/src',
+        ),
+        'Rmsramos\\Activitylog\\Database\\Factories\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/rmsramos/activitylog/database/factories',
+        ),
+        'Rmsramos\\Activitylog\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/rmsramos/activitylog/src',
         ),
         'Ramsey\\Uuid\\' => 
         array (
@@ -463,8 +479,8 @@ class ComposerStaticInit7e8c3c14ff33b199b4a0838993eb8423
         ),
         'League\\Uri\\' => 
         array (
-            0 => __DIR__ . '/..' . '/league/uri-interfaces',
-            1 => __DIR__ . '/..' . '/league/uri',
+            0 => __DIR__ . '/..' . '/league/uri',
+            1 => __DIR__ . '/..' . '/league/uri-interfaces',
         ),
         'League\\MimeTypeDetection\\' => 
         array (
@@ -672,9 +688,27 @@ class ComposerStaticInit7e8c3c14ff33b199b4a0838993eb8423
         'AnourValar\\EloquentSerialize\\Grammars\\QueryBuilderGrammar' => __DIR__ . '/..' . '/anourvalar/eloquent-serialize/src/Grammars/QueryBuilderGrammar.php',
         'AnourValar\\EloquentSerialize\\Package' => __DIR__ . '/..' . '/anourvalar/eloquent-serialize/src/Package.php',
         'AnourValar\\EloquentSerialize\\Service' => __DIR__ . '/..' . '/anourvalar/eloquent-serialize/src/Service.php',
+        'App\\Extended\\Models\\ExtendedModel' => __DIR__ . '/../..' . '/app/Extended/Models/ExtendedModel.php',
+        'App\\Filament\\Resources\\CountryResource' => __DIR__ . '/../..' . '/app/Filament/Resources/CountryResource.php',
+        'App\\Filament\\Resources\\CountryResource\\Pages\\CreateCountry' => __DIR__ . '/../..' . '/app/Filament/Resources/CountryResource/Pages/CreateCountry.php',
+        'App\\Filament\\Resources\\CountryResource\\Pages\\EditCountry' => __DIR__ . '/../..' . '/app/Filament/Resources/CountryResource/Pages/EditCountry.php',
+        'App\\Filament\\Resources\\CountryResource\\Pages\\ListCountries' => __DIR__ . '/../..' . '/app/Filament/Resources/CountryResource/Pages/ListCountries.php',
+        'App\\Filament\\Resources\\CountryResource\\RelationManagers\\StatesRelationManager' => __DIR__ . '/../..' . '/app/Filament/Resources/CountryResource/RelationManagers/StatesRelationManager.php',
+        'App\\Filament\\Resources\\HolidayResource' => __DIR__ . '/../..' . '/app/Filament/Resources/HolidayResource.php',
+        'App\\Filament\\Resources\\HolidayResource\\Pages\\ManageHolidays' => __DIR__ . '/../..' . '/app/Filament/Resources/HolidayResource/Pages/ManageHolidays.php',
+        'App\\Filament\\Resources\\UserResource' => __DIR__ . '/../..' . '/app/Filament/Resources/UserResource.php',
+        'App\\Filament\\Resources\\UserResource\\Pages\\CreateUser' => __DIR__ . '/../..' . '/app/Filament/Resources/UserResource/Pages/CreateUser.php',
+        'App\\Filament\\Resources\\UserResource\\Pages\\EditUser' => __DIR__ . '/../..' . '/app/Filament/Resources/UserResource/Pages/EditUser.php',
+        'App\\Filament\\Resources\\UserResource\\Pages\\ListUsers' => __DIR__ . '/../..' . '/app/Filament/Resources/UserResource/Pages/ListUsers.php',
+        'App\\Filament\\Resources\\UserResource\\RelationManagers\\ManageByRelationManager' => __DIR__ . '/../..' . '/app/Filament/Resources/UserResource/RelationManagers/ManageByRelationManager.php',
+        'App\\Filament\\Resources\\UserResource\\RelationManagers\\ManagesRelationManager' => __DIR__ . '/../..' . '/app/Filament/Resources/UserResource/RelationManagers/ManagesRelationManager.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Models\\Country\\Country' => __DIR__ . '/../..' . '/app/Models/Country/Country.php',
+        'App\\Models\\Country\\State' => __DIR__ . '/../..' . '/app/Models/Country/State.php',
+        'App\\Models\\Settings\\Holiday' => __DIR__ . '/../..' . '/app/Models/Settings/Holiday.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
+        'App\\Providers\\Filament\\AdminPanelProvider' => __DIR__ . '/../..' . '/app/Providers/Filament/AdminPanelProvider.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'BladeUI\\Heroicons\\BladeHeroiconsServiceProvider' => __DIR__ . '/..' . '/blade-ui-kit/blade-heroicons/src/BladeHeroiconsServiceProvider.php',
         'BladeUI\\Icons\\BladeIconsServiceProvider' => __DIR__ . '/..' . '/blade-ui-kit/blade-icons/src/BladeIconsServiceProvider.php',
@@ -7085,6 +7119,20 @@ class ComposerStaticInit7e8c3c14ff33b199b4a0838993eb8423
         'Ramsey\\Uuid\\UuidInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidInterface.php',
         'Ramsey\\Uuid\\Validator\\GenericValidator' => __DIR__ . '/..' . '/ramsey/uuid/src/Validator/GenericValidator.php',
         'Ramsey\\Uuid\\Validator\\ValidatorInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/Validator/ValidatorInterface.php',
+        'Rmsramos\\Activitylog\\Actions\\ActivityLogTimelineSimpleAction' => __DIR__ . '/..' . '/rmsramos/activitylog/src/Actions/ActivityLogTimelineSimpleAction.php',
+        'Rmsramos\\Activitylog\\Actions\\ActivityLogTimelineTableAction' => __DIR__ . '/..' . '/rmsramos/activitylog/src/Actions/ActivityLogTimelineTableAction.php',
+        'Rmsramos\\Activitylog\\Actions\\Concerns\\ActionContent' => __DIR__ . '/..' . '/rmsramos/activitylog/src/Actions/Concerns/ActionContent.php',
+        'Rmsramos\\Activitylog\\ActivitylogPlugin' => __DIR__ . '/..' . '/rmsramos/activitylog/src/ActivitylogPlugin.php',
+        'Rmsramos\\Activitylog\\ActivitylogServiceProvider' => __DIR__ . '/..' . '/rmsramos/activitylog/src/ActivitylogServiceProvider.php',
+        'Rmsramos\\Activitylog\\Infolists\\Components\\TimeLineIconEntry' => __DIR__ . '/..' . '/rmsramos/activitylog/src/Infolists/Components/TimeLineIconEntry.php',
+        'Rmsramos\\Activitylog\\Infolists\\Components\\TimeLinePropertiesEntry' => __DIR__ . '/..' . '/rmsramos/activitylog/src/Infolists/Components/TimeLinePropertiesEntry.php',
+        'Rmsramos\\Activitylog\\Infolists\\Components\\TimeLineRepeatableEntry' => __DIR__ . '/..' . '/rmsramos/activitylog/src/Infolists/Components/TimeLineRepeatableEntry.php',
+        'Rmsramos\\Activitylog\\Infolists\\Components\\TimeLineTitleEntry' => __DIR__ . '/..' . '/rmsramos/activitylog/src/Infolists/Components/TimeLineTitleEntry.php',
+        'Rmsramos\\Activitylog\\Infolists\\Concerns\\HasModifyState' => __DIR__ . '/..' . '/rmsramos/activitylog/src/Infolists/Concerns/HasModifyState.php',
+        'Rmsramos\\Activitylog\\RelationManagers\\ActivitylogRelationManager' => __DIR__ . '/..' . '/rmsramos/activitylog/src/RelationManagers/ActivitylogRelationManager.php',
+        'Rmsramos\\Activitylog\\Resources\\ActivitylogResource' => __DIR__ . '/..' . '/rmsramos/activitylog/src/Resources/ActivitylogResource.php',
+        'Rmsramos\\Activitylog\\Resources\\ActivitylogResource\\Pages\\ListActivitylog' => __DIR__ . '/..' . '/rmsramos/activitylog/src/Resources/ActivitylogResource/Pages/ListActivitylog.php',
+        'Rmsramos\\Activitylog\\Resources\\ActivitylogResource\\Pages\\ViewActivitylog' => __DIR__ . '/..' . '/rmsramos/activitylog/src/Resources/ActivitylogResource/Pages/ViewActivitylog.php',
         'RyanChandler\\BladeCaptureDirective\\BladeCaptureDirective' => __DIR__ . '/..' . '/ryangjchandler/blade-capture-directive/src/BladeCaptureDirective.php',
         'RyanChandler\\BladeCaptureDirective\\BladeCaptureDirectiveServiceProvider' => __DIR__ . '/..' . '/ryangjchandler/blade-capture-directive/src/BladeCaptureDirectiveServiceProvider.php',
         'SQLite3Exception' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/SQLite3Exception.php',
@@ -7291,6 +7339,24 @@ class ComposerStaticInit7e8c3c14ff33b199b4a0838993eb8423
         'SebastianBergmann\\Type\\UnknownType' => __DIR__ . '/..' . '/sebastian/type/src/type/UnknownType.php',
         'SebastianBergmann\\Type\\VoidType' => __DIR__ . '/..' . '/sebastian/type/src/type/VoidType.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
+        'Spatie\\Activitylog\\ActivityLogStatus' => __DIR__ . '/..' . '/spatie/laravel-activitylog/src/ActivityLogStatus.php',
+        'Spatie\\Activitylog\\ActivityLogger' => __DIR__ . '/..' . '/spatie/laravel-activitylog/src/ActivityLogger.php',
+        'Spatie\\Activitylog\\ActivitylogServiceProvider' => __DIR__ . '/..' . '/spatie/laravel-activitylog/src/ActivitylogServiceProvider.php',
+        'Spatie\\Activitylog\\CauserResolver' => __DIR__ . '/..' . '/spatie/laravel-activitylog/src/CauserResolver.php',
+        'Spatie\\Activitylog\\CleanActivitylogCommand' => __DIR__ . '/..' . '/spatie/laravel-activitylog/src/CleanActivitylogCommand.php',
+        'Spatie\\Activitylog\\Contracts\\Activity' => __DIR__ . '/..' . '/spatie/laravel-activitylog/src/Contracts/Activity.php',
+        'Spatie\\Activitylog\\Contracts\\LoggablePipe' => __DIR__ . '/..' . '/spatie/laravel-activitylog/src/Contracts/LoggablePipe.php',
+        'Spatie\\Activitylog\\EventLogBag' => __DIR__ . '/..' . '/spatie/laravel-activitylog/src/EventLogBag.php',
+        'Spatie\\Activitylog\\Exceptions\\CouldNotLogActivity' => __DIR__ . '/..' . '/spatie/laravel-activitylog/src/Exceptions/CouldNotLogActivity.php',
+        'Spatie\\Activitylog\\Exceptions\\CouldNotLogChanges' => __DIR__ . '/..' . '/spatie/laravel-activitylog/src/Exceptions/CouldNotLogChanges.php',
+        'Spatie\\Activitylog\\Exceptions\\InvalidConfiguration' => __DIR__ . '/..' . '/spatie/laravel-activitylog/src/Exceptions/InvalidConfiguration.php',
+        'Spatie\\Activitylog\\Facades\\CauserResolver' => __DIR__ . '/..' . '/spatie/laravel-activitylog/src/Facades/CauserResolver.php',
+        'Spatie\\Activitylog\\Facades\\LogBatch' => __DIR__ . '/..' . '/spatie/laravel-activitylog/src/Facades/LogBatch.php',
+        'Spatie\\Activitylog\\LogBatch' => __DIR__ . '/..' . '/spatie/laravel-activitylog/src/LogBatch.php',
+        'Spatie\\Activitylog\\LogOptions' => __DIR__ . '/..' . '/spatie/laravel-activitylog/src/LogOptions.php',
+        'Spatie\\Activitylog\\Models\\Activity' => __DIR__ . '/..' . '/spatie/laravel-activitylog/src/Models/Activity.php',
+        'Spatie\\Activitylog\\Traits\\CausesActivity' => __DIR__ . '/..' . '/spatie/laravel-activitylog/src/Traits/CausesActivity.php',
+        'Spatie\\Activitylog\\Traits\\LogsActivity' => __DIR__ . '/..' . '/spatie/laravel-activitylog/src/Traits/LogsActivity.php',
         'Spatie\\Color\\CIELab' => __DIR__ . '/..' . '/spatie/color/src/CIELab.php',
         'Spatie\\Color\\Cmyk' => __DIR__ . '/..' . '/spatie/color/src/Cmyk.php',
         'Spatie\\Color\\Color' => __DIR__ . '/..' . '/spatie/color/src/Color.php',
