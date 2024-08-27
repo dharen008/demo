@@ -2,7 +2,6 @@
 
 namespace App\Filament\Resources;
 
-use AmidEsfahani\FilamentTinyEditor\TinyEditor;
 use App\Filament\Resources\CountryResource\RelationManagers;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\CountryResource\Pages;
@@ -55,12 +54,6 @@ class CountryResource extends Resource
 							->unique( ignoreRecord: true )
 							->minLength( 1 )
 							->integer(),
-						TinyEditor::make( 'content' )
-							->profile( 'default' )
-							->resize( 'both' )
-							->columnSpanFull()
-							->required()
-							->ltr()
 					] )
 					->columns( 8 ),
 			] );

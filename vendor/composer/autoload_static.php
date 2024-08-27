@@ -220,7 +220,6 @@ class ComposerStaticInit7e8c3c14ff33b199b4a0838993eb8423
         array (
             'App\\' => 4,
             'AnourValar\\EloquentSerialize\\' => 29,
-            'AmidEsfahani\\FilamentTinyEditor\\' => 32,
         ),
     );
 
@@ -680,16 +679,9 @@ class ComposerStaticInit7e8c3c14ff33b199b4a0838993eb8423
         array (
             0 => __DIR__ . '/..' . '/anourvalar/eloquent-serialize/src',
         ),
-        'AmidEsfahani\\FilamentTinyEditor\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/amidesfahani/filament-tinyeditor/src',
-        ),
     );
 
     public static $classMap = array (
-        'AmidEsfahani\\FilamentTinyEditor\\Tiny' => __DIR__ . '/..' . '/amidesfahani/filament-tinyeditor/src/Tiny.php',
-        'AmidEsfahani\\FilamentTinyEditor\\TinyEditor' => __DIR__ . '/..' . '/amidesfahani/filament-tinyeditor/src/TinyEditor.php',
-        'AmidEsfahani\\FilamentTinyEditor\\TinyeditorServiceProvider' => __DIR__ . '/..' . '/amidesfahani/filament-tinyeditor/src/TinyeditorServiceProvider.php',
         'AnourValar\\EloquentSerialize\\Facades\\EloquentSerializeFacade' => __DIR__ . '/..' . '/anourvalar/eloquent-serialize/src/Facades/EloquentSerializeFacade.php',
         'AnourValar\\EloquentSerialize\\Grammars\\EloquentBuilderGrammar' => __DIR__ . '/..' . '/anourvalar/eloquent-serialize/src/Grammars/EloquentBuilderGrammar.php',
         'AnourValar\\EloquentSerialize\\Grammars\\ModelGrammar' => __DIR__ . '/..' . '/anourvalar/eloquent-serialize/src/Grammars/ModelGrammar.php',

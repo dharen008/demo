@@ -13,7 +13,6 @@ return new class extends Migration
             $table->string( 'slug', 100 )->nullable();
             $table->string( 'code', 5 )->nullable();
             $table->integer( 'phone_code' )->nullable();
-            $table->text( 'content' )->nullable();
             $table->bigInteger( 'created_by' )->unsigned()->nullable();
             $table->timestamp( 'created_at' )->nullable();
             $table->bigInteger( 'updated_by' )->unsigned()->nullable();
