@@ -6,6 +6,9 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AmidEsfahani\\FilamentTinyEditor\\Tiny' => $vendorDir . '/amidesfahani/filament-tinyeditor/src/Tiny.php',
+    'AmidEsfahani\\FilamentTinyEditor\\TinyEditor' => $vendorDir . '/amidesfahani/filament-tinyeditor/src/TinyEditor.php',
+    'AmidEsfahani\\FilamentTinyEditor\\TinyeditorServiceProvider' => $vendorDir . '/amidesfahani/filament-tinyeditor/src/TinyeditorServiceProvider.php',
     'AnourValar\\EloquentSerialize\\Facades\\EloquentSerializeFacade' => $vendorDir . '/anourvalar/eloquent-serialize/src/Facades/EloquentSerializeFacade.php',
     'AnourValar\\EloquentSerialize\\Grammars\\EloquentBuilderGrammar' => $vendorDir . '/anourvalar/eloquent-serialize/src/Grammars/EloquentBuilderGrammar.php',
     'AnourValar\\EloquentSerialize\\Grammars\\ModelGrammar' => $vendorDir . '/anourvalar/eloquent-serialize/src/Grammars/ModelGrammar.php',
