@@ -1,4 +1,3 @@
 ---
-title: My example documentation
-icon: heroicon-o-book-open
+title: Sample 1
 ---
