@@ -12,6 +12,7 @@ use Filament\Tables\Actions\ForceDeleteBulkAction;
 use Filament\Tables\Actions\RestoreBulkAction;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\ServiceProvider;
+use Guava\FilamentKnowledgeBase\Filament\Panels\KnowledgeBasePanel;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -20,7 +21,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        KnowledgeBasePanel::configureUsing(
+            fn( KnowledgeBasePanel $panel ) => $panel
+                ->viteTheme( 'resources/css/filament/admin/theme.css' )
+        );
     }
 
     /**
